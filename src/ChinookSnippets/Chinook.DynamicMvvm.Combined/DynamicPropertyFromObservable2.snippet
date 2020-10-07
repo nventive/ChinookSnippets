@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>DynamicProperty from Observable (Two way)</Title>
+      <Author>nventive</Author>
+      <Description>
+        Code snippet to implement a IDynamicProperty in a class implementing IViewModel.
+        You can also use "ckpropo" to go faster.
+      </Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Chinook DynamicMvvm DynamicProperty Property Code Snippet</Keyword>
+      </Keywords>
+      <Shortcut>ckprop</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>Chinook.DynamicMvvm.Abstractions</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Chinook.DynamicMvvm</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>PropertyType</ID>
+          <ToolTip>Property Type</ToolTip>
+          <Default>int</Default>
+        </Literal>
+        <Literal Editable="true">
+          <ID>PropertyName</ID>
+          <ToolTip>Property Name</ToolTip>
+          <Default>MyProperty</Default>
+        </Literal>
+        <Literal Editable="true">
+          <ID>InitialValue</ID>
+          <ToolTip>The initial value of this property.</ToolTip>
+          <Default>0</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp" Kind="" Delimiter="$">
+        <![CDATA[public $PropertyType$ $PropertyName$
+			{
+				get => this.GetFromObservable<$PropertyType$>(Observe$PropertyName$(), initialValue: $InitialValue$);
+				set => this.Set(value);
+			}
+      
+      private IObservable<$PropertyType$> Observe$PropertyName$()
+      {
+        throw new NotImplementedException();
+      }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

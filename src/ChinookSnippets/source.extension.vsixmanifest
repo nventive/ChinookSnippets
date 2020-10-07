@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+    <Metadata>
+        <Identity Id="ChinookSnippets.595acae5-b22d-4e82-b521-d0e41f8487e5" Version="1.0" Language="en-US" Publisher="nventive" />
+        <DisplayName>Chinook Snippets</DisplayName>
+        <Description xml:space="preserve">Collection of code snippets for Chinook libraries.</Description>
+        <MoreInfo>https://github.com/nventive/ChinookSnippets</MoreInfo>
+        <Tags>chinook mvvm snippets</Tags>
+    </Metadata>
+    <Installation>
+        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[16.0, 17.0)" />
+    </Installation>
+    <Dependencies>
+        <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
+    </Dependencies>
+    <Assets>
+        <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="File" Path="Chinook.DataLoader\DataLoader.pkgdef" />
+        <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="File" Path="Chinook.DynamicMvvm.Combined\DynamicMvvm.Combined.pkgdef" />
+        <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="File" Path="Chinook.DynamicMvvm.Unique\DynamicMvvm.Unique.pkgdef" />
+    </Assets>
+    <Prerequisites>
+        <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[16.0,17.0)" DisplayName="Visual Studio core editor" />
+    </Prerequisites>
+</PackageManifest>
