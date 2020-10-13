@@ -32,6 +32,8 @@ contributing to this project.
 
 Be mindful of our [Code of Conduct](CODE_OF_CONDUCT.md).
 
+Make sure you read [this guide](https://docs.microsoft.com/en-us/visualstudio/ide/how-to-distribute-code-snippets) on how to distribute code snippets.
+
 ## Contributors
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
