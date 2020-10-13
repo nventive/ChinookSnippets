@@ -6,7 +6,7 @@ VisualStudio Extension providing code snippets for Chinook libraries.
 
 ## Getting Started
 
-Simply install the "Chinook Snippets" VisualStudio extension from the Visual Studio Marketplace.
+Simply install the [Chinook Snippets](https://marketplace.visualstudio.com/items?itemName=nventivecorp.ChinookSnippets) Visual Studio Extension from the Visual Studio Marketplace.
 
 ## Features
 
