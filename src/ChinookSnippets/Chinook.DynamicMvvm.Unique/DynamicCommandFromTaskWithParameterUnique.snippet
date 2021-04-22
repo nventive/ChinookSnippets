@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>DynamicCommand with Parameter from Task</Title>
+      <Author>nventive</Author>
+      <Description>
+        Code snippet to implement a IDynamicCommand in a class implementing IViewModel.
+      </Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Chinook DynamicMvvm DynamicCommand Command Code Snippet</Keyword>
+      </Keywords>
+      <Shortcut>ckcmdtp</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>Chinook.DynamicMvvm.Abstractions</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Chinook.DynamicMvvm</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>CommandName</ID>
+          <Default>MyCommand</Default>
+        </Literal>
+        <Literal Editable="true">
+          <ID>ParameterType</ID>
+		  <ToolTip>Property Type</ToolTip>
+		  <Default>int</Default>
+		</Literal>
+      </Declarations>
+      <Code Language="csharp" Kind="" Delimiter="$">
+        <![CDATA[public IDynamicCommand $CommandName$ => this.GetCommandFromTask<$ParameterType$>(async (ct, parameter) =>
+        {
+$end$
+        });]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
