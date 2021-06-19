@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="ChinookSnippets.595acae5-b22d-4e82-b521-d0e41f8487e5" Version="1.0" Language="en-US" Publisher="nventive" />
+        <Identity Id="ChinookSnippets.595acae5-b22d-4e82-b521-d0e41f8487e5" Version="1.0.1" Language="en-US" Publisher="nventive" />
         <DisplayName>Chinook Snippets</DisplayName>
         <Description xml:space="preserve">Collection of code snippets for Chinook libraries.</Description>
         <MoreInfo>https://github.com/nventive/ChinookSnippets</MoreInfo>
