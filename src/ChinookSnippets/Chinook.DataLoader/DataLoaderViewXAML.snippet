@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>DataLoaderView for x:Bind - XAML</Title>
+      <Author>nventive</Author>
+      <Description>Code snippet to add an x:Bind compatible DataLoaderView. You should use ckdlv in your C# code behind beforehand.</Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Chinook DataLoaderView Code Snippet</Keyword>
+      </Keywords>
+      <Shortcut>ckdlvx</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>Chinook.DataLoader.Uno</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Chinook.DataLoader</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>DataType</ID>
+          <Default>int</Default>
+        </Literal>
+        <Literal Editable="true">
+          <ID>Source</ID>
+          <Default>DataLoader</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="XAML" Kind="" Delimiter="$">
+        <![CDATA[<local:DataLoaderView_$DataType$ Source="{x:Bind $Source$}">
+  <DataTemplate x:DataType="local:DataLoaderViewState_$DataType$">
+  </DataTemplate>
+</local:DataLoaderView_$DataType$>]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

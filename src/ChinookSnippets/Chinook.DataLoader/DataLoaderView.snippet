@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>DataLoaderView for x:Bind - C#</Title>
+      <Author>nventive</Author>
+      <Description>Code snippet to implement a class derivated from DataLoaderView and DataLoaderViewState where Data is typed. Use this in your page's code behind to generate a DataLoaderView compatible with x:Bind.</Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Keywords>
+        <Keyword>Chinook DataLoaderView Code Snippet</Keyword>
+      </Keywords>
+      <Shortcut>ckdlv</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>Chinook.DataLoader.Uno</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>Chinook.DataLoader</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>DataType</ID>
+          <Default>int</Default>
+        </Literal>        
+      </Declarations>
+      <Code Language="csharp" Kind="" Delimiter="$">
+        <![CDATA[public class DataLoaderViewState_$DataType$ : DataLoaderViewState
+	{
+		public DataLoaderViewState_$DataType$(DataLoaderViewState dataLoaderViewState) : base(dataLoaderViewState)
+		{
+			Data = ($DataType$)dataLoaderViewState.Data;
+		}
+
+		public new $DataType$ Data { get; }
+	}
+
+	public class DataLoaderView_$DataType$ : DataLoaderView
+	{
+		public DataLoaderView_$DataType$()
+		{
+			Style = App.Current.Resources[typeof(DataLoaderView)] as Style;
+		}
+
+		protected override void SetState(DataLoaderViewState state)
+		{
+			var typedState = new DataLoaderViewState_$DataType$(state);
+			base.SetState(typedState);
+		}
+	}]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
