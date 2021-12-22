@@ -1,7 +1,7 @@
-﻿// C#
-[$RootKey$\Languages\CodeExpansions\CSharp\Paths]
+﻿// XAML
+[$RootKey$\Languages\CodeExpansions\XAML\Paths]
 "Chinook.DataLoader"="$PackageFolder$"
 
-// XAML
-[$RootKey$\Languages\CodeExpansions\XAML\Paths]
+// C#
+[$RootKey$\Languages\CodeExpansions\CSharp\Paths]
 "Chinook.DataLoader"="$PackageFolder$"
