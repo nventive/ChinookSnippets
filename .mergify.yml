@@ -1,15 +1,9 @@
 pull_request_rules:
 
-  - name: automatic strict merge when CI passes, has 2 reviews, no requests for change and is labeled 'ready-to-merge' unless labelled 'do-not-merge/breaking-change' or 'do-not-merge/work-in-progress'
+  - name: automatic strict merge when has 2 reviews, no requests for change and is labeled 'ready-to-merge' unless labelled 'do-not-merge/breaking-change' or 'do-not-merge/work-in-progress'
     conditions:
       # Only pull-requests sent to the master branch
       - base=master
-
-      # All Azure builds should be green:
-      - status-success=Uno.UI - CI
-
-      # CLA check must pass:
-      #- "status-success=license/cla"
 
       # Note that this only matches people with write / admin access to the repo,
       # see <https://doc.mergify.io/conditions.html#attribute-list>
@@ -28,9 +22,6 @@ pull_request_rules:
     actions:
       merge:
         method: merge
-        # https://doc.mergify.io/strict-workflow.html
-        # https://doc.mergify.io/actions.html#label
-        strict: smart
 
   - name: automatic merge for allcontributors pull requests
     conditions:
